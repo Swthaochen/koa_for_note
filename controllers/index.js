@@ -24,7 +24,7 @@ var fn_index = async (ctx, next) => {
         });
     }
     makeInfo(result, ctx);
-    ctx.cookies.set('userid',result[0].userId,{expires:new Date('2018-01-01'),maxAge:60*60,httpOnly:true})
+    ctx.cookies.set('userid',result[0].userId,{expires:new Date('2018-01-01'),maxAge:60*1000,httpOnly:true})
 };
 
 // 获取用户的openid
